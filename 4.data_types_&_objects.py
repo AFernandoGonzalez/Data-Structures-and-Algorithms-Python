@@ -115,12 +115,91 @@
 
 
 
-words = str.split('The longest word in this sentence')
-w = sorted(words, key=len)
-# w = sorted(words, key=str.lower)
-print(w)
+# words = str.split('The longest word in this sentence')
+# w = sorted(words, key=len)
+# # w = sorted(words, key=str.lower)
+# print(w)
 
 
+
+
+
+# Recursive functions
+
+# iteration
+# def iterTest(low,high):
+#     while low <= high:
+#         print(low)
+#         low=low+1
+
+# # recursion
+# def recurTest(low, high):
+#     if low <= high:
+#         print(low)
+#         recurTest(low+1, high)
+
+
+#compares the running time of a list compared to a generator
+# import time
+# #generator function creates an iterator of odd numbers between n and m
+# def oddGen(n,m):
+#     while n<m:
+#         yield n
+#         n+=2
+
+#builds a list of odd numbers between n and m
+# def oddList(n,m):
+#     lst = []
+#     while n<m:
+#         lst.append(n)
+#         n+=2
+#     return lst
+
+
+# #the time it takes to perform sum on an iterator
+# t1=time.time()
+# sum(oddGen(1,1000000))
+# print('Time to sum an iteration: %f' % (time.time()-t1))
+
+# #the time it takes to build and sum a list
+# t1=time.time()
+# sum(oddList(1,1000000))
+# print("Time to build and sum a list: %f" % (time.time() - t1))
+
+
+
+
+
+# Classes and object programming
+
+
+# class Employee(object):
+#     numEmp = 0
+
+#     def __init__(self, name, rate):
+#         self.owed = 0
+#         self.name = name
+#         self.rate = rate
+#         Employee.numEmp += 1
+    
+#     def __del__(self):
+#         Employee.numEmp -= 1
+    
+#     def hours(self, numHours):
+#         self.owed += numHours*self.rate
+#         return ('%.2f hours worked' % numHours)
+    
+#     def pay(self):
+#         self.owed = 0
+#         return('payed %s ' % self.name)
+
+# emp1 = Employee('Jill', 18.50)
+# emp2 = Employee('Fer', 48.50)
+
+# print(Employee.numEmp)
+# print(emp1.hours(20))
+# print(emp1.owed)
+# print(emp1.pay())
 
 
 
